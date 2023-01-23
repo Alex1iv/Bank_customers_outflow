@@ -1,20 +1,13 @@
-import json
-from dotmap import DotMap
+import pandas as pd
+import sys
+sys.path.insert(1, '../')
 
-def config_reader(path_to_json_conf: str) -> dict:
-    """Load parameters from configuration file.
-
-    Args:
-    ------------
-    path_to_json_conf (_str_): путь к файлу конфигурации
-
-    Returns:
-    ------------
-    config (dict): dictionary with parameters
-    """    
-    with open(path_to_json_conf, 'r') as config_file:
-        config_dict = json.load(config_file)
+class My_Dataframe():
+    def __init__(self, data, sep):
+        self.df = pd.read_csv(data, sep=',')
     
-    config = DotMap(config_dict)
+
     
-    return config
+churn_data = My_Dataframe('../data/churn.zip', sep=',')    
+
+print(churn_data.shape)
