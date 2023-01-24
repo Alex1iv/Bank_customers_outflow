@@ -4,7 +4,7 @@
 ## Content
 
 [1. Summary](README.md#Project-description)
-[2. Data](README.md#Data)                               
+[2. Data and methods](README.md#Data_and_methods)                               
 [3. Inferences](README.md#Inferences)                   
 
 
@@ -21,7 +21,7 @@ The clients data was taken from the [Kaggle.com](https://www.kaggle.com/datasets
 
 In order to identify the best model, it was tested several algorythms: 
 * linear regression, 
-* polinominal regression, 
+* polinominal regression with L1 and L2 regulirization, 
 * decision tree 
 * random forest
 
