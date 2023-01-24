@@ -1,13 +1,10 @@
-#import sys
-#sys.path.insert(1, './')
-
 from sklearn import ensemble #ансамбли
 
 
 
 #Создаем объект класса случайный лес
 
-def Model_RandomForest(config):
+def ModelRandomForest(config):
     """Метод формирования модели
     """
     rf = ensemble.RandomForestClassifier(
