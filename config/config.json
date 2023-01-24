@@ -1,9 +1,19 @@
 {
-
+    
     "//": "Set seed value",
     "random_seed" : 42,
 
-    "models_path": "/models/"
+
+
+    "//": "Model",
+    "models_path": "/models/",
+    "n_estimators" : 500,
+    "criterion": "entropy",
+    "max_depth":"8",
+    "min_samples_leaf" : "10",
+
+    "threshold_opt" : "0.35"
+    
 
 
 }
