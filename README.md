@@ -3,9 +3,9 @@
 
 ## Content
 
-[1. Summary](README.md#Project-description)
-[2. Data and methods](README.md#Data_and_methods)                               
-[3. Inferences](README.md#Inferences)                   
+[1. Summary](README.md#Summary)   
+[2. Data and methods](README.md#Data-and-methods)     
+[3. Project structure](README.md#Project-structure)
 
 
 ### Summary
