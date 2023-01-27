@@ -1,4 +1,5 @@
 
 notebooks/Bank_clients_ru.ipynb
 
-__pycache__
+# Ignore folders
+__pycache__/
