@@ -5,7 +5,7 @@
 
 
 
-    "//": "Model",
+    "//": "Model folder",
     "models_path": "/models/",
     "n_estimators" : 500,
     "criterion": "entropy",
