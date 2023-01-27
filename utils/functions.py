@@ -12,9 +12,10 @@ from sklearn import metrics #метрики
 
 
 # Импортируем константы из файла config
-def get_data():
-    config = config_reader('config/config.json') 
+config = config_reader('config/config.json')
 
+def get_data():
+     
     churn_data = pd.read_csv('data/churn.zip')
 
     # add new features
@@ -44,7 +45,7 @@ def get_data():
     scaler.fit(X)
     X_scaled = scaler.transform(X)
 
-
+    # split the data using stratification
     X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, stratify=y, random_state=0) # для проверки - 0 для работы - config.random_seed
 
     print('Train shape: {}, Test  shape: {}'.format(X_train.shape, X_test.shape), '\n')
@@ -57,30 +58,22 @@ def get_data():
 
     rf.fit(X_train, y_train)
 
-    # #Делаем предсказание класса для тренировочной выборки
-    # y_pred_train = rf.predict(X_train)
-    # #Выводим отчет о метриках
-    # print('Train: {:.2f}'.format(metrics.f1_score(y_train, y_pred_train)))
-
-    # #Делаем предсказание класса для тестовой выборки
-    # y_pred_test = rf.predict(X_test)
-    # #Выводим отчет о метриках
-    # print('Test: {:.2f}'.format(metrics.f1_score(y_test, y_pred_test)))
-
     # Optimization of the model by F1-score-------------------------------------
 
-    #Считаем вероятности оттока клиентов модели случайный лес на тестовой выборке
+    # Calculation the client outflow probability for the test sample
     y_test_proba_pred = rf.predict_proba(X_test)[:, 1]
 
-
+    # Creartion of an empty list to store f1 metrics
     f1_scores = []
-    #Сгенерируем набор вероятностных порогов в диапазоне от 0.1 до 1
+    # Generation of an array of treshholds 
     thresholds = np.arange(0.1, 1, 0.05)
-    #В цикле будем перебирать сгенерированные пороги
+    
+    # cycle to iterate on each treshhold
     for threshold in thresholds:
-        #Клиентов, для которых вероятность оттока > threshold относим к классу 1. В противном случае - к классу 0
+        # clients with the outflow probability > threshold belong to the class 1 else class 0
         y_test_pred = np.where(y_test_proba_pred>threshold, 1, 0)
-        #Считаем метрику и добавляем их в списки
+        
+        # calculation of metrics
         f1_scores.append(metrics.f1_score(y_test, y_test_pred))
         
     # Maximal F1-score
@@ -93,15 +86,12 @@ def get_data():
     threshold_opt = round(0.05 + (np.argmax(f1_scores) + 1)*0.05, 2)
     print(f'Best F1-score: {max_f1_score.round(3)}, Maximal probability: {threshold_opt}')
 
-    #Задаем оптимальный порог вероятностей
+    # Set an optimal probability value
     threshold_opt = threshold_opt
-    #Клиентов, для которых вероятность оттока > threshold относим к классу 1. В противном случае - к классу 0
+    # Clients with the outflow probability > threshold belong to the class 1 else class 0
     y_pred_opt = np.where(y_test_proba_pred > threshold_opt, 1, 0) 
     
-    #Считаем метрики
-    #print(metrics.classification_report(y_test, y_pred_opt))
-    #print('F1-score:', metrics.f1_score(y_test, y_pred_opt).round(3))
-    
+    # calculation of F1 metric
     f1_scores_total = metrics.f1_score(y_test, y_pred_opt).round(3)
     
     return f1_scores_total
