@@ -1,18 +1,14 @@
-from sklearn import ensemble #ансамбли
-
-
-
-#Создаем объект класса случайный лес
+from sklearn import ensemble
 
 def ModelRandomForest(config):
-    """Метод формирования модели
+    """Random forest model
     """
     rf = ensemble.RandomForestClassifier(
-        n_estimators=int(config.n_estimators), #число деревьев
-        criterion=config.criterion, #критерий эффективности
-        max_depth=int(config.max_depth), #максимальная глубина дерева
-        min_samples_leaf = int(config.min_samples_leaf), # Минимальное число объектов в листе
-        random_state=int(config.random_seed) #генератор случайных чисел
+        n_estimators=int(config.n_estimators), # tree number
+        criterion=config.criterion, # efficiency criteria
+        max_depth=int(config.max_depth), #max tree depth
+        min_samples_leaf = int(config.min_samples_leaf), # minimal number of objects
+        random_state=int(config.random_seed) 
     )
 
     return rf
