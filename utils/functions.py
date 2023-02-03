@@ -1,17 +1,17 @@
 import numpy as np
-import pandas as pd #для анализа и предобработки данных
+import pandas as pd 
 
 from utils.reader_config import config_reader 
 from models.models_collection import ModelRandomForest
 
 
-from sklearn import preprocessing #предобработка
-from sklearn.model_selection import train_test_split #сплитование выборки
-from sklearn import metrics #метрики
+from sklearn import preprocessing  
+from sklearn.model_selection import train_test_split 
+from sklearn import metrics  
 
 
 
-# Импортируем константы из файла config
+# Import of parameters
 config = config_reader('config/config.json')
 
 def get_data():
