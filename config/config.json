@@ -7,12 +7,11 @@
 
     "//": "Model folder",
     "models_path": "/models/",
-    "n_estimators" : 500,
-    "criterion": "entropy",
-    "max_depth":"8",
-    "min_samples_leaf" : "10",
-
-    "threshold_opt" : "0.35"
+    "n_estimators" : 160,
+    "criterion": "gini",
+    "max_depth":"13",
+    "min_samples_leaf" : "2",
+    "threshold_opt" : "0.4"
     
 
 
