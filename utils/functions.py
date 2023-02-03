@@ -83,7 +83,8 @@ def get_data():
     f1_scores = np.array(f1_scores)
 
     # The probability value of the best f1-score value
-    threshold_opt = round(0.05 + (np.argmax(f1_scores) + 1)*0.05, 2)
+    threshold_opt = thresholds[np.argmax(f1_scores)].round(3)
+    
     print(f'Best F1-score: {max_f1_score.round(3)}, Maximal probability: {threshold_opt}')
 
     # Set an optimal probability value
