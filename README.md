@@ -9,7 +9,7 @@
 
 
 ### Summary
-It was predicted the client outflow from a certain bank using the ensamble ML model. The model quality is estimated using the F1-metrics.
+It was predicted the client outflow from a certain bank using the ensamble ML model. It was created a micro service application to calculate the F1-score. Several model were compared and the Random Forest model showed satisfactory result (F1-score=0.82) even after reducing the number of features from 11 to 4 ()
 
 
 ### Data and methods
@@ -55,6 +55,7 @@ Bank_customers_outflow
 ├── README.md
 └── utils
     ├── functions.py
+    ├── reader_config.py
     └── __ init __.py
 
 ```
