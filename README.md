@@ -13,7 +13,8 @@
 It was predicted the client outflow from a certain bank using the ensamble ML model. Several model were compared and the Random Forest model showed satisfactory result (F1-score=0.82) even after reducing the number of features from 11 to 4.
 It was created a micro service application to predict customer status.
 
-<p align="center"> <img src="figures/page.png" width="600" height="350"> </p>
+<p align="center"> 
+<img src="figures/page.png" width="600" height="350"> </p>
 
 ## Data and methods
 It is wiedly known that retaintion of an existing client is cheaper than to find a new one. Thus, the client, an international bank, wants to predict whether the client is going to leave it or he is still loyal to the bank. If yes, it will be offered some additional options to recover his loyalty to the company services.
