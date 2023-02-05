@@ -14,7 +14,7 @@ It was predicted the client outflow from a certain bank using the ensamble ML mo
 It was created a micro service application to predict customer status.
 
 <p align="center"> 
-<img src="figures/page.png" width="600" height="350"> 
+<img src="figures/mainpage.png" width="600" height="350"> 
 </p>
 
 
