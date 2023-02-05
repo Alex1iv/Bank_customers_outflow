@@ -3,16 +3,19 @@
 
 ## Content
 
-[1. Summary](README.md#Summary)   
-[2. Data and methods](README.md#Data-and-methods)     
-[3. Project structure](README.md#Project-structure)
+[1. Summary](README.md#Summary)
+[2. Data and methods](README.md#Data-and-methods) 
+[3. Installation](README.md#Installation)    
+[4. Project structure](README.md#Project-structure)
 
 
-### Summary
-It was predicted the client outflow from a certain bank using the ensamble ML model. It was created a micro service application to calculate the F1-score. Several model were compared and the Random Forest model showed satisfactory result (F1-score=0.82) even after reducing the number of features from 11 to 4 ()
+## Summary
+It was predicted the client outflow from a certain bank using the ensamble ML model. Several model were compared and the Random Forest model showed satisfactory result (F1-score=0.82) even after reducing the number of features from 11 to 4.
+It was created a micro service application to predict customer status.
 
+<p align="center"> <img src="figures/Page.png" width="600" height="350"> </p>
 
-### Data and methods
+## Data and methods
 It is wiedly known that retaintion of an existing client is cheaper than to find a new one. Thus, the client, an international bank, wants to predict whether the client is going to leave it or he is still loyal to the bank. If yes, it will be offered some additional options to recover his loyalty to the company services.
 
 The assignment is narrowed do the binary classification: whether or not the client leave the bank.
@@ -27,7 +30,23 @@ In order to identify the best model, it was tested several algorythms:
 
 It was found that classes in the dataset are not balanced. Taking this fact into account, it was decided to use F1-score metrics since it provided harmonic mean of two other metrics: precision and recall.
 
+:arrow_up:[ to content](_)
 
+
+
+## Installation
+Type in the console:
+```Python
+# 1. Clone repository and install requirements.
+git clone https://github.com/Alex1iv/Bank_customers_outflow.git
+# 2. install requirements
+pip install -r -q requirements.txt
+
+# 3. Run application on a web page using main.py.
+python main.py
+
+# 4. When finished, press Ctrl + C in console and close the web page.
+```
 
 :arrow_up:[ to content](_)
 
@@ -53,10 +72,13 @@ Bank_customers_outflow
 ├── notebooks           # project notebooks storage
 │   └── Bank_clients_en.ipynb
 ├── README.md
-└── utils
+└── utils               # additional functions and applications
+    ├── application.py
     ├── functions.py
     ├── reader_config.py
     └── __ init __.py
 
 ```
 </details>
+
+:arrow_up:[ to content](_)
