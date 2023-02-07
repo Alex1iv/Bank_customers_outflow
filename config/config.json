@@ -1,19 +1,13 @@
 {
-    
     "//": "Set seed value",
     "random_seed" : 42,
 
-
+    "//": "Model folder",
     "model_path" : "./models/",
 
-    "//": "Model folder",
-    "models_path": "/models/",
     "n_estimators" : 160,
     "criterion": "gini",
     "max_depth":"13",
     "min_samples_leaf" : "2",
     "threshold_opt" : "0.4"
-    
-
-
 }
