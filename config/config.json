@@ -5,9 +5,9 @@
     "//": "Model folder",
     "model_path" : "./models/",
 
-    "n_estimators" : 160,
-    "criterion": "gini",
-    "max_depth":"13",
+    "n_estimators" : 67,
+    "criterion": "entropy",
+    "max_depth":"18",
     "min_samples_leaf" : "2",
     "threshold_opt" : "0.4"
 }
