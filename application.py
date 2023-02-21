@@ -20,6 +20,8 @@ st.write("""
 # This app predicts customer status!
 """)
 
+st.markdown("**How to use this app:** Just change 'tenure' from 0 to 1 and see how changes predicted customer status below")
+
 
 st.sidebar.header('User Input Parameters')
 
