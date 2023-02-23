@@ -5,8 +5,6 @@ from utils.reader_config import config_reader
 import pickle
 import os
 
-
-
 # Import of parameters
 config = config_reader('config/config.json')
 
@@ -21,7 +19,6 @@ st.write("""
 """)
 
 st.markdown("**How to use this app:** Just change 'tenure' from 0 to 1 and see how changes predicted customer status below")
-
 
 st.sidebar.header('User Input Parameters')
 
