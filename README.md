@@ -18,16 +18,16 @@ It was predicted the client churn from a german bank using the ensemble machine 
 
 
 ## Data and methods
-It is widely known that the retention of an existing client is cheaper than finding a new one. Thus, the client, an international bank, wants to predict whether the client is going to leave it or he is still loyal to the bank. If yes, a manager will offer some additional options to recover his loyalty to the company's services.
+It is widely known that the retention of an existing client is cheaper than finding a new one. An international bank wants to predict whether its client is going to leave or not. If yes, a manager will try to recover their loyalty by offering them additional services.
 
-The assignment is narrowed to the binary classification: whether or not the client leaves the bank. The data was taken from the [Kaggle.com](https://www.kaggle.com/datasets/mathchi/churn-for-bank-customers) website.
+The assignment is narrowed to the binary classification: whether or not the client leaves the bank. The dataset was taken from the [Kaggle.com](https://www.kaggle.com/datasets/mathchi/churn-for-bank-customers) website.
 
-Status disribution in the population on the fig.1 shows that almost 20% of clients was churned and the majority of these clients were women (fig.2).
+The loyalty status disribution on the fig.1 shows that almost 20% of clients were churned and the majority of them were women (fig.2).
 <div align="center">
 <img src="./figures/fig_1.png" width="350"  /> 
 <img src="./figures/fig_6.png" width="350"  >  </div>
 
-Churned clients lived in 3 countries: Germany, France and Spain (fig.9). They didn't have the Active Client Status though they saved significanta sums on their accounts.
+Churned clients lived in 3 countries: Germany, France and Spain (fig.9). They weren't active though they saved significant sums on their accounts.
 
 <div align="center">
 <img src="./figures/fig_9.png" width="350" /> 
